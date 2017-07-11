@@ -11,8 +11,9 @@ module.exports = (app) => {
     });
   });
 
-  app.get('/:name', (req, res) => {
-    tsControl.processReq(req, res);
+  app.get('/:timestamp', (req, res) => {
+    let timestamp = req.params.timestamp;
+    res.json(tsControl.processReq(timestamp));
   });
   
 }
