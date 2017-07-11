@@ -1,0 +1,53 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timestamp Microservice API</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="#" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Timestamp Microservice</h1>
+		
+		<p>
+			 This microservice accepts a url and checks if it is in natural or unix date and returns
+			 the unix and natural date stamps in json format. The natural dates are not case sensitive
+			 and will be returned as "January 01, 2017".
+		</p>
+
+		<h3>Example request</h3>
+		
+		<ul>
+		
+			<li>"https://timestamp-microsvc.glitch.me/January%2001,%202017"</li>
+			<li>"https://timestamp-microsvc.glitch.me/Jan%2001,%202017"</li>
+      <li>"https://timestamp-microsvc.glitch.me/1483228800000"</li>
+		
+		</ul>
+
+		<h3>Example Response</h3>
+
+		<p>{ "unix": 1450137600, "natural", "January 01, 2017"}</p>
+
+		<a href="https://github.com/whackdev/timestamp-microsvc">GitHub Repository</a>
+
+    <!-- Your web-app is https, so your scripts need to be too 
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script> -->
+
+  </body>
+</html>
